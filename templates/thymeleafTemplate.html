@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vote Control</title>
 </head>
 <body>
-
+    <form th:action="@{/vote}" method="post">
+        <input type="hidden" name="user" th:value="${user}" />
+        <button type="submit" th:disabled="${!allowVote(user)}">
+            Vote
+        </button>
+    </form>
 </body>
 </html>
