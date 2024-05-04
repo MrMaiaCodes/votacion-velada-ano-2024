@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
-public class VoteControl {
+public class VoteControlImpl {
 
     private Map<String, Long> usersLatestVote = new HashMap<>();
 
